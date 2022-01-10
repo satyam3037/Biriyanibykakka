@@ -1,0 +1,565 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Best Online Food Delivery Service in India | Biriyanibykakka.com</title>
+        <style>/* CSS Reset */
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            
+            html{
+                scroll-behavior: smooth;
+            }
+            
+            /* CSS Variables */
+            :root{
+                --navbar-height: 59px;
+            }
+            
+            /* Navigation Bar */
+            #navbar{
+                display: flex;
+                align-items: center;
+                position: sticky;
+                top: 0px;
+            }
+            
+            #navbar::before{
+                content: "";
+                background-color: black;
+                position: absolute;
+                top:0px;
+                left:0px;
+                height: 100%;
+                width:100%;
+                z-index: -1;
+                opacity: 0.7;
+            }
+            
+            /* Navigation Bar: Logo and Image */
+            #logo{
+                margin: 10px 34px;
+            }
+            
+            #logo img{
+                height: 59px;
+                margin: 3px 6px;
+            }
+            
+            
+            /* Navigation Bar: List Styling */
+            
+            #navbar ul{
+                display: flex;
+                font-family: 'Baloo Bhai', cursive;
+            }
+            
+            #navbar ul li{ 
+                list-style: none;
+                font-size: 1.3rem;
+            }
+            
+            #navbar ul li a{
+                color: white;
+                display: block;
+                padding: 3px 22px;
+                border-radius: 20px;
+                text-decoration: none;
+            }
+            
+            #navbar ul li a:hover{
+                color: black;
+                background-color: white;
+            }
+            
+            /* Home Section */
+            #home{
+                display: flex;
+                flex-direction: column;
+                padding:3px 200px;
+                height: 550px;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            #home::before{ 
+                content: "";
+                position: absolute;
+                background: url('https://wallpapercave.com/wp/wp1874159.jpg') no-repeat center center/cover;
+                height: 642px;
+                top:0px;
+                left:0px;
+                width: 100%;
+                z-index: -1;
+                opacity:0.89;
+            }
+            
+            #home h1{
+                color:white;
+                text-align: center;
+                font-family: 'Bree Serif', serif;
+            }
+            
+            #home p{
+                color:white;
+                text-align: center;
+                font-size: 1.5rem;
+                font-family: 'Bree Serif', serif;
+            }
+            /* Services Section */
+            #services{
+                margin: 34px;
+                display: flex;
+            }
+            #services .box{ 
+                border: 2px solid brown;
+                padding: 34px;
+                margin: 2px 55px;
+                border-radius: 28px;
+                background: #f2f2f2;
+                margin-bottom: 20px;
+            }
+            
+            #services .box img{ 
+               height: 160px;
+               margin: auto;
+               display: block;
+            }
+            
+            #services .box p{
+                font-family: 'Bree Serif', serif;
+            
+            } 
+            
+            /* Clients Section */
+            #client-section{ 
+                position: relative;
+            }
+            
+            #client-section::before{
+             content: "";
+             position: absolute;
+             background: url('https://marcas-logos.net/wp-content/uploads/2021/06/Swiggy-logo-1536x864.png');
+             width: 100%;
+             height: 100%;
+             z-index: -1;
+             opacity: 0.3;
+            }
+            
+            #clients{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .client-item{
+                padding: 34px;
+            }
+            
+            #clients img{
+                height: 124px;
+            }
+            
+            
+            /* Contact Section */
+            #contact{
+                position: relative;
+            }
+            #contact::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                opacity: 0.7;
+                background: url('https://www.india.com/wp-content/uploads/2019/09/Zomato-1.jpg') no-repeat center center/cover;
+            
+            }
+            #contact-box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 34px;
+            }
+            #contact-box input, 
+            #contact-box textarea{
+                width: 100%;
+                padding: 0.5rem;
+                border-radius: 9px;
+                font-size: 1.1rem;
+            } 
+            
+            #contact-box form{
+                width: 40%;
+            }
+            
+            #contact-box label{
+               font-size: 1.3rem;
+               font-family: 'Bree Serif', serif;
+            
+            }
+            
+            
+            footer{
+                background: black;
+                color: white;
+                padding: 9px 20px;
+            }
+            
+            /* Utility Classes */
+            .h-primary{
+                font-family: 'Bree Serif', serif;
+                font-size: 3.8rem;
+                padding: 12px;
+            }
+            
+            .h-secondary{
+                font-family: 'Bree Serif', serif;
+                font-size: 2.3rem;
+                padding: 12px;
+            }
+            
+            .btn{
+                padding: 6px 20px;
+                border: 2px solid white;
+                background-color: brown;
+                color: white;
+                margin: 17px;
+                font-size: 1.5rem;
+                border-radius: 10px;
+                cursor:pointer;
+            }
+            
+            .center{
+                text-align: center;
+            }
+            /* CSS Reset */
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            
+            html{
+                scroll-behavior: smooth;
+            }
+            
+            /* CSS Variables */
+            :root{
+                --navbar-height: 59px;
+            }
+            
+            /* Navigation Bar */
+            #navbar{
+                display: flex;
+                align-items: center;
+                position: sticky;
+                top: 0px;
+            }
+            
+            #navbar::before{
+                content: "";
+                background-color: black;
+                position: absolute;
+                top:0px;
+                left:0px;
+                height: 100%;
+                width:100%;
+                z-index: -1;
+                opacity: 0.7;
+            }
+            
+            /* Navigation Bar: Logo and Image */
+            #logo{
+                margin: 10px 34px;
+            }
+            
+            #logo img{
+                height: 50px;
+                margin: 3px 6px;
+            }
+            
+            
+            /* Navigation Bar: List Styling */
+            
+            #navbar ul{
+                display: flex;
+                font-family: 'Baloo Bhai', cursive;
+            }
+            
+            #navbar ul li{ 
+                list-style: none;
+                font-size: 1.3rem;
+            }
+            
+            #navbar ul li a{
+                color: white;
+                display: block;
+                padding: 3px 22px;
+                border-radius: 20px;
+                text-decoration: none;
+            }
+            
+            #navbar ul li a:hover{
+                color: black;
+                background-color: white;
+            }
+            
+            /* Home Section */
+            #home{
+                display: flex;
+                flex-direction: column;
+                padding:3px 200px;
+                height: 550px;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            #home::before{ 
+                content: "";
+                position: absolute;
+                background: url('https://wallpapercave.com/wp/wp1874159.jpg') no-repeat center center/cover;
+                height: 642px;
+                top:0px;
+                left:0px;
+                width: 100%;
+                z-index: -1;
+                opacity:0.89;
+            }
+            
+            #home h1{
+                color:white;
+                text-align: center;
+                font-family: 'Bree Serif', serif;
+            }
+            
+            #home p{
+                color:white;
+                text-align: center;
+                font-size: 1.5rem;
+                font-family: 'Bree Serif', serif;
+            }
+            /* Services Section */
+            #services{
+                margin: 34px;
+                display: flex;
+            }
+            #services .box{ 
+                border: 2px solid brown;
+                padding: 34px;
+                margin: 2px 55px;
+                border-radius: 28px;
+                background: #f2f2f2;
+                margin-bottom: 20px;
+            }
+            
+            #services .box img{ 
+               height: 160px;
+               margin: auto;
+               display: block;
+            }
+            
+            #services .box p{
+                font-family: 'Bree Serif', serif;
+            
+            } 
+            
+            /* Clients Section */
+            #client-section{ 
+                position: relative;
+            }
+            
+            #client-section::before{
+             content: "";
+             position: absolute;
+             background: url('https://thumbs.dreamstime.com/b/client-magnifying-glass-word-blurred-nature-background-searching-concept-80652945.jpg');
+             width: 100%;
+             height: 100%;
+             z-index: -1;
+             opacity: 0.3;
+            }
+            
+            #clients{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .client-item{
+                padding: 34px;
+            }
+            
+            #clients img{
+                height: 124px;
+            }
+            
+            
+            /* Contact Section */
+            #contact{
+                position: relative;
+            }
+            #contact::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                opacity: 0.7;
+                background: url('https://wallpapercave.com/wp/wp6944123.jpg') no-repeat center center/cover;
+            
+            }
+            #contact-box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 34px;
+            }
+            #contact-box input, 
+            #contact-box textarea{
+                width: 100%;
+                padding: 0.5rem;
+                border-radius: 9px;
+                font-size: 1.1rem;
+            } 
+            
+            #contact-box form{
+                width: 40%;
+            }
+            
+            #contact-box label{
+               font-size: 1.3rem;
+               font-family: 'Bree Serif', serif;
+            
+            }
+            
+            
+            footer{
+                background: black;
+                color: white;
+                padding: 9px 20px;
+            }
+            
+            /* Utility Classes */
+            .h-primary{
+                font-family: 'Bree Serif', serif;
+                font-size: 3.8rem;
+                padding: 12px;
+            }
+            
+            .btn{
+                padding: 6px 20px;
+                border: 2px solid white;
+                background-color: brown;
+                color: white;
+                margin: 17px;
+                font-size: 1.5rem;
+                border-radius: 10px;
+                cursor:pointer;
+            }
+            
+            .center{
+                text-align: center;
+            }
+            .h-secondary{
+                font-family: 'Bree Serif', serif;
+                font-size: 2.3rem;
+                padding: 12px;
+            }
+            </style>
+    </head>
+    
+    <body>
+        <nav id="navbar">
+            <div id="logo">
+                <img src="logo.jpeg" alt="Biriyanibykakka.com">
+            </div>
+            <ul>
+                <li class="item"><a href="#home">Home</a></li>
+                <li class="item"><a href="#services-container">Services</a></li>
+                <li class="item"><a href="#client-section">Our Clients</a></li>
+                <li class="item"><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    
+        <section id="home">
+            <h1 class="h-primary">Welcome to BIRIYANI BY KAKKA JI</h1>
+            <p>Biriyani by kakka ji.there is always serve fresh to eat.</p> 
+            <p>We focus on maintain quality on low price & We serve for quality not money. </p>
+            <p>Takeway:- Sarfabad,supertech capetown sec-74,Noida 201301</p>
+            <button class="btn">Order Now</button>
+        </section>
+    
+        <section id="services-container">
+            <h1 class="h-primary center">Our Services</h1>
+            <div id="services">
+                <div class="box">
+                    <img src="https://th.bing.com/th/id/R.b97cf3aa1f97659cc305407dfa2c166d?rik=XYi5QLPf7h%2bucA&riu=http%3a%2f%2fverandabahrain.com%2fwp-content%2fuploads%2f2018%2f02%2fcatering-slider.jpg&ehk=K2JBxLrUhhLzSkyLGBe7%2fgW5LBpho9%2bDl07o8pFa1PA%3d&risl=&pid=ImgRaw&r=0" alt="">
+                    <h2 class="h-secondary center">Food Catering</h2>
+                    <p class="center">Bread rice by kakka ji,Party blast main course,party blast with Biriyani,Dessert,EXTRA(raita,salan,boondi raita,veg.raita,kachamber raita),Family combo.</p>
+                </div>
+                <div class="box">
+                    <img src="https://i.pinimg.com/736x/de/dc/f7/dedcf77566cb758cfd471103084e9d68.jpg" alt="">
+                    <h2 class="h-secondary center">Bulk Ordering</h2>
+                    <p class="center">Hydrabadi handi Biriyani,Lucknow/Muradabadi handi Biriyani,Kolkata handi Biriyani,Nasta/break fast by kakka ji,Indian main course by kakka ji,Chinese main course by kakka ji,Roll hi Roll.</p>
+                </div>
+                <div class="box">
+                    <img src="https://th.bing.com/th/id/R.acac5e478733a874b63cafe8f21048d3?rik=7b03hKXDgS%2bCCg&riu=http%3a%2f%2fwww.brookhurst.com%2fblog%2fwp-content%2fuploads%2f2018%2f08%2fiStock-883865986.jpg&ehk=SiW31D8ePQ9H6F5qr8%2b7N0yMmgDylHtSbJInKFRiu38%3d&risl=&pid=ImgRaw&r=0" alt="">
+                    <h2 class="h-secondary center">Food Ordering</h2>
+                    <p class="center">2 Pax-1/2 kg paneer biriyani+kebab+2Roti(559Rs),2Pax-1/2 chicken biriyani+Kebab+Roti(659Rs),4Pax-1/2 veg.biriyani+1/2 paneer biriyani+korma/kebab+2Roti(889Rs),4 Pax-1/2 Chicken biriyni+1/2Mutton biriyani+korma/kebab+2Roti(989Rs),8Pax-1kg chicken biriyani+1kg kolkata mutton biriyani+kebab/korma+4Roti(1059Rs),8Pax-1kg veg.biriyani+1kg paneer biriyani+kebab+Daal/korma+Roti(1259Rs).</p>
+                </div>
+            </div>
+        </section>
+        <section id="client-section">
+            <h1 class="h-primary center">Our Clients</h1>
+            <div id="clients">
+                <div class="client-item">
+                    <img src="https://th.bing.com/th/id/R.7ae9d69759a7e66094bcff0e6594b21e?rik=hs%2fgJnbPWiTanQ&riu=http%3a%2f%2fwww.pngimagesfree.com%2fLOGO%2fS%2fSwiggy%2fSwiggy-Logo-Vector.png&ehk=8QWOZlAzQLMCa1AHAvjk2sQ7ELqRyCBAGkGKuZscCEo%3d&risl=&pid=ImgRaw&r=0" alt="Our Client">
+                </div>
+                <div class="client-item">
+                    <img src="https://th.bing.com/th/id/R.6bf54e6fdac152057b9eedb0b2a9b529?rik=eFEQHoTFPaNJSg&riu=http%3a%2f%2fstatic.dnaindia.com%2fsites%2fdefault%2ffiles%2fstyles%2ffull%2fpublic%2f2017%2f05%2f18%2f576333-423558-zomato.jpg&ehk=5IQO7PondNIFgeP4%2fKeBs07PWRVPa0ImSb7Y5n6PRYk%3d&risl=&pid=ImgRaw&r=0" alt="Our Client">
+                </div>
+              
+                
+                </div>
+            </div>
+    
+        </section>
+    
+        <section id="contact">
+            <h1 class="h-primary center">Contact Us (call:-07310957822)</h1>
+            <div id="contact-box">
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="email" name="name" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number: </label>
+                        <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message: </label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+    
+        <footer>
+            <div class="center">
+                Copyright &copy; www.Biriyanibykakka.com All rights reserved!
+            </div>
+        </footer>
+    </body>
+    
+    </html>
